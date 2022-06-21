@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avillar <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avillar <avillar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 15:24:20 by avillar           #+#    #+#             */
-/*   Updated: 2021/01/06 15:48:26 by avillar          ###   ########.fr       */
+/*   Updated: 2022/06/21 15:38:37 by avillar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t		i;
 
 	i = 0;
-	if (!(rtn = malloc(size * count)))
+	rtn = malloc(size * count);
+	if (!rtn)
 		return (0);
 	((char *)rtn)[0] = 0;
 	while (i <= count * size)

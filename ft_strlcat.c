@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avillar <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avillar <avillar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 13:28:41 by avillar           #+#    #+#             */
-/*   Updated: 2021/01/06 14:52:25 by avillar          ###   ########.fr       */
+/*   Updated: 2022/06/21 15:56:03 by avillar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *restrict dst,
+size_t	ft_strlcat(char *restrict dst,
 		const char *restrict src, size_t dstsize)
 {
 	int		i;

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avillar <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avillar <avillar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 15:50:10 by avillar           #+#    #+#             */
-/*   Updated: 2021/01/07 14:51:49 by avillar          ###   ########.fr       */
+/*   Updated: 2022/06/21 15:54:50 by avillar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		mallocsize(unsigned int nb, int s, int n)
+int	mallocsize(unsigned int nb, int s, int n)
 {
 	if (n < 0)
 	{
@@ -24,9 +24,9 @@ int		mallocsize(unsigned int nb, int s, int n)
 	return (mallocsize((nb / 10), s += 1, n));
 }
 
-int		neg(int n)
+int	neg(int n)
 {
-	unsigned int neg;
+	unsigned int	neg;
 
 	if (n < 0)
 		neg = n * -1;
@@ -47,7 +47,8 @@ char	*ft_itoa(int n)
 		i++;
 	nb = neg(n);
 	len = mallocsize(nb, 0, n);
-	if (!(rtn = malloc(sizeof(char) * len + 1)))
+	rtn = malloc(sizeof(char) * len + 1);
+	if (!rtn)
 		return (0);
 	if (i > 0)
 		rtn[0] = '-';

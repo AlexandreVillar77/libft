@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avillar <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avillar <avillar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 11:07:14 by avillar           #+#    #+#             */
-/*   Updated: 2021/01/07 12:02:07 by avillar          ###   ########.fr       */
+/*   Updated: 2022/06/21 15:45:17 by avillar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		triminatorstart(char const *s1, char const *set)
+int	triminatorstart(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
@@ -38,7 +38,7 @@ int		triminatorstart(char const *s1, char const *set)
 	return (i);
 }
 
-int		triminatorend(char const *s1, char const *set, int len)
+int	triminatorend(char const *s1, char const *set, int len)
 {
 	int		i;
 	int		j;
@@ -67,7 +67,8 @@ int		triminatorend(char const *s1, char const *set, int len)
 
 char	*rtnnull(char *ret)
 {
-	if (!(ret = malloc(sizeof(char) * 1)))
+	ret = malloc(sizeof(char) * 1);
+	if (!ret)
 		return (0);
 	ret[0] = '\0';
 	return (ret);
@@ -90,12 +91,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ret = 0;
 	if (i + end > len)
 		return (rtnnull(ret));
-	if (!(ret = malloc(sizeof(char) * (len - (end + i) + 1))))
+	ret = malloc(sizeof(char) * (len - (end + i) + 1));
+	if (!ret)
 		return (0);
 	while (i < len - end)
 	{
-		ret[j] = s1[i];
-		j++;
+		ret[j++] = s1[i];
 		i++;
 	}
 	ret[j] = '\0';

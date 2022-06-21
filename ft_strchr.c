@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avillar <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avillar <avillar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 11:42:54 by avillar           #+#    #+#             */
-/*   Updated: 2021/01/06 12:19:41 by avillar          ###   ########.fr       */
+/*   Updated: 2022/06/21 15:54:04 by avillar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == (char)c)
-		return ((char*)(s + i));
+		return ((char *)(s + i));
 	return (0);
 }

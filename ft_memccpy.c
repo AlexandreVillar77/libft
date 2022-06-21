@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avillar <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avillar <avillar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 11:01:23 by avillar           #+#    #+#             */
-/*   Updated: 2021/01/06 11:13:05 by avillar          ###   ########.fr       */
+/*   Updated: 2022/06/21 15:52:49 by avillar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ void	*ft_memccpy(void *restrict dst,
 
 	cr = c;
 	i = sizeof(cr);
-	while (n > 0 && *(char*)src != cr)
+	while (n > 0 && *(char *)src != cr)
 	{
-		*(char*)dst = *(char*)src;
+		*(char *)dst = *(char *)src;
 		dst++;
 		src++;
 		n -= i;
 	}
-	if (*(char*)src == cr)
+	if (*(char *)src == cr)
 	{
-		*(char*)dst = *(char*)src;
+		*(char *)dst = *(char *)src;
 		dst++;
 		src++;
 		return (dst);
